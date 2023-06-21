@@ -1,0 +1,30 @@
+var mysql = require('mysql');
+
+var connection = mysql.createConnection({
+    //variables de conexion
+    host :'localhost',
+    user : 'root',
+    password : '',
+    database : 'ventas',
+})
+
+connection.connect(
+    (err)=>{
+        if(!err){
+            console.log('conexion correcta');
+        }else{
+            console.log('conexion error');
+        }
+        
+    }
+    
+      
+);
+
+module.exports=connection
+
+/* connection.query("SELECT * FROM TbProductos", function (err, resultado){
+    console.log(resultado);
+});
+
+connection.end(); */
